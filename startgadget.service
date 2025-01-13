@@ -1,0 +1,11 @@
+[Unit]
+Description=Start Gadget Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=sudo /usr/bin/bash /home/pi/paperless-gadget/startgadget.sh
+
+[Install]
+WantedBy=multi-user.target
